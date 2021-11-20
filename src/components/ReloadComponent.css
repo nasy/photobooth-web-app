@@ -1,0 +1,12 @@
+.reload-button {
+    font-size: 16px;
+    padding: 40px;
+    cursor: pointer;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-radius: 4px;
+    background-color: #9775f7;
+    color: white;
+    width: 200px;
+    text-align: center;
+}

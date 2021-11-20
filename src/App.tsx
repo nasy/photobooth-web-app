@@ -1,26 +1,29 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import ImageViewComponent from './components/ImageViewComponent';
+
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link,
+  useNavigate
+} from "react-router-dom";
+import ImageListComponent from './components/ImageListComponent';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  let navigate = useNavigate();
+  return(
+    <div>
+      <Routes>
+        <Route path="/image/:id" element={<ImageViewComponent navigate={navigate}/>}>
+        </Route>
+        <Route path="/" element={<ImageListComponent navigate={navigate}/>}>
+        </Route>
+      </Routes>
     </div>
-  );
+  )
 }
 
 export default App;
