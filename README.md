@@ -31,8 +31,9 @@ Start by setting the right nodeJs version to run the project
 Install the dependencies
 ### `yarn install`
 
-Pull the common repository submodule
-### `cd common && git pull`
+Pull the common repository submodule using the following commands in this order:
+### `git submodule update --recursive --init`
+### `git submodule update --recursive --remote`
 
 Run the project on your local machine
 ### `yarn start`
