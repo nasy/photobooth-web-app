@@ -3,10 +3,9 @@ import { ListImageEntity } from '../common/models/ListImageEntity';
 import { PaginatedImageList } from '../common/models/PaginatedImageListEntity';
 import { ServiceContainer } from '../common/services/serviceContainer';
 import HeaderComponent from './HeaderComponent';
+import './ImageListComponent.css';
 import LoadingComponent from './LoadingComponent';
 import ReloadComponent from './ReloadComponent';
-import './ImageListComponent.css';
-import { MAIN_COLOR, MAIN_COLOR_DARKER } from '../styles';
 
 interface Props {
   navigate: Function;
@@ -45,6 +44,10 @@ class ImageListComponent extends Component<Props, State> {
     }).catch((e) => {
       this.setState({loading: false, loadingError: true})
     })
+  }
+  reload(): void {
+    this.setState({loading: true, loadingError: false})
+    setTimeout(() => this.load(), 2000)
   }
   loadMore() : void {
     let nextPage = this.state.page + 1;
@@ -87,7 +90,7 @@ class ImageListComponent extends Component<Props, State> {
         <div className="controls">
         {this.state.loadingError &&
          <div className="reload">
-        <ReloadComponent reload={this.load.bind(this)}/>
+        <ReloadComponent reload={this.reload.bind(this)}/>
         </div>}
         {this.state.loading &&
         <LoadingComponent/>}

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { MAIN_COLOR_DARKER, WHITE_COLOR } from '../styles';
 import './HeaderComponent.css';
 
 interface Props {
@@ -23,14 +22,6 @@ class HeaderComponent extends Component<Props, State> {
       {this.props.showGoBack &&
       <div 
         onClick={() => this.goToList()}
-        onMouseLeave={(e: any) => {
-          e.target.style.background = MAIN_COLOR_DARKER;
-          e.target.style.color = WHITE_COLOR;
-        }}
-        onMouseOver={(e: any) => {
-          e.target.style.background = WHITE_COLOR;
-          e.target.style.color = MAIN_COLOR_DARKER;
-        }}
         className="go-back-button">
           Go Back
         </div>}

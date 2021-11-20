@@ -9,4 +9,10 @@
     color: white;
     width: 200px;
     text-align: center;
+    margin-top: 16px;
+}
+.reload-text {
+    font-size: 18px;
+    padding-bottom: 16px;
+    text-align: center;
 }

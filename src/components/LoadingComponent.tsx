@@ -23,7 +23,7 @@ class LoadingComponent extends Component<Props, State> {
       <div className="">
        <Lottie 
         options={defaultOptions}
-          height={200}
+          height={160}
           width={200}
         />
       </div>

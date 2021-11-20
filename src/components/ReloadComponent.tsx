@@ -13,10 +13,15 @@ class ReloadComponent extends Component<Props, State> {
   render() {
     return (
       <div 
+        className="reload-text">
+          Loading error
+       <div 
         onClick={() => this.props.reload()}
         className="reload-button">
         Reload
       </div>
+      </div>
+      
     );
   }
 }

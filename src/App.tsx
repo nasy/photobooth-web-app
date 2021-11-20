@@ -1,16 +1,9 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import ImageViewComponent from './components/ImageViewComponent';
-
 import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link,
-  useNavigate
+  Route, Routes, useNavigate
 } from "react-router-dom";
+import './App.css';
 import ImageListComponent from './components/ImageListComponent';
+import ImageViewComponent from './components/ImageViewComponent';
 
 function App() {
   let navigate = useNavigate();

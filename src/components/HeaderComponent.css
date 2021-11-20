@@ -23,3 +23,6 @@
     background-color: #9775f7;
     color: white;
 }
+.go-back-button:hover {
+    background-color: #6f4dce;
+}
