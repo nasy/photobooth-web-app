@@ -6,7 +6,13 @@ You can click on load more images once you reach the bottom and you can click on
 ## Project structure
 The project structure is very simple. We are using react router and we have 2 main routes, the image list and the image details.
 
-As we also have a react native app we are using git submodules tu share some code.
+As we also have a react native app we are using git submodules tu share some code between the two projects.
+
+As a bonus I have added Lottie animations as a dependency to show some loading effects.
+
+I kept the project simple for this demo as the end goal is to demonstrate my react skills.
+If you want to see more functionalities please check my side project called Rizo App in the following link that I build all by myself:
+https://apps.apple.com/app/id1494981202
 
 ## Project setup
 
